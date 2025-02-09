@@ -1,61 +1,127 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Nexus - home</title>
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body>
-    <header>
-      <div class="logo">
-        <div class="settings-container">
-          <button class="settings-btn">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-0.22-0.08-0.47,0-0.59,0.22L2.74,8.87 C2.62,9.08,2.66,9.34,2.86,9.48l2.03,1.58C4.84,11.36,4.8,11.69,4.8,12s0.02,0.64,0.07,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54 c0.05,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"/>
-            </svg>
-            Paramètres
-          </button>
-          <div class="settings-dropdown">
-            <button class="theme-btn-dropdown">Thème</button>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projets - Nexus</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/projets.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <div class="settings-container">
+        <button class="settings-btn">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-0.22-0.08-0.47,0-0.59,0.22L2.74,8.87 C2.62,9.08,2.66,9.34,2.86,9.48l2.03,1.58C4.84,11.36,4.8,11.69,4.8,12s0.02,0.64,0.07,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54 c0.05,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"/>
+          </svg>
+          Paramètres
+        </button>
+        <div class="settings-dropdown">
+          <button class="theme-btn-dropdown">Thème</button>
         </div>
-        <h1>Nexus</h1>
       </div>
-      <nav>
-        <ul>
-          <li><a href="index.html" class="active">Accueil</a></li>
-          <li><a href="projets.html">Projets</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section class="hero">
-        <div class="hero-content">
-          <h2>NEXUS</h2>
-          <p>Explorez les projets réalisés par NEXUS STUDIO.</p>
-          <p>NEXUS est un projet qui regroupe tous nos projets de développement marrants ou passionnants.</p>
-          <p>NEXUS vous apprend aussi le domaine de l'informatique, notamment le développement, le hacking en cybersécurité et le fonctionnement des IA.</p>
-          <a href="projets.html" class="btn">Accéder aux projets</a>
-        </div>
-      </section>
+      <h1>Nexus</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="projets.html" class="active">Projets</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-      <section class="about">
-        <div class="container">
-          <h3>À propos</h3>
-          <p>
-            Nous sommes des codeurs passionnés, des explorateurs du numérique. Dans notre antre, le code est roi et le hacking une manière de repenser le monde digital.
-          </p>
-          <p>
-            Pour nous l'informatique, un moyen d'echapper a la realité.
-          </p>
+  <main>
+    <section class="projects-hero">
+      <h2>Nos Projets</h2>
+      <p>Découvrez notre collection de projets innovants</p>
+    </section>
+
+    <section class="projects-grid">
+      <article class="project-card">
+        <div class="project-content">
+          <h3>Projet Auto-Password</h3>
+          <p>Un projet sur l'automatisation de mots de passe. Fait par le random sur Java.</p>
+          <div class="project-tags">
+            <span>Java</span>
+            <span>Sécurité</span>
+            <span>Automatisation</span>
+          </div>
+          <a href="https://leo62-glitch.github.io/Secure_Password/" class="project-link" target="_blank">Voir le projet</a>
         </div>
-      </section>
-    </main>
-    <footer>
-      <p>&copy; 2025 Nexus. Developper par "leo78454657" et "focus903" sur discord.</p>
-    </footer>
-    <script src="js/script.js" type="module"></script>
-  </body>
+      </article>
+
+      <article class="project-card">
+        <div class="project-content">
+          <h3>LE CODEUR</h3>
+          <p>Le codeur est un site qui permet de coder des messages. Cela permettrait de cacher des messages par exemple.</p>
+          <div class="project-tags">
+            <span>Cryptographie</span>
+            <span>Web</span>
+            <span>Sécurité</span>
+          </div>
+          <a href="https://leo62-glitch.github.io/Coder/" class="project-link" target="_blank">Voir le projet</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-content">
+          <h3>Le Décodeur</h3>
+          <p>Le décodeur est un site qui permet de décoder des messages.</p>
+          <div class="project-tags">
+            <span>Cryptographie</span>
+            <span>Web</span>
+            <span>Sécurité</span>
+          </div>
+          <a href="https://leo62-glitch.github.io/decoder/" class="project-link" target="_blank">Voir le projet</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-content">
+          <h3>Pong</h3>
+          <p>Ceci est un banal Pong codé par Focus.<br><br>(JEUX SEULEMENT DISPONIBLE SUR PC)</p>
+          <div class="project-tags">
+            <span>Jeu</span>
+            <span>Web</span>
+            <span>Rétro</span>
+          </div>
+          <a href="#" class="project-link" target="_blank">Voir le projet</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-content">
+          <h3>LE RICKROLL</h3>
+          <p>Ceci est un troll pour rickroll, le site vous dit d'entrer votre pseudo mais en cliquant sur "valider",<br><br>vous vous faites rickroll.</p>
+          <div class="project-tags">
+            <span>Web</span>
+            <span>Troll</span>
+            <span>Fun</span>
+          </div>
+          <a href="https://focus-001.github.io/log-in/" class="project-link" target="_blank">Voir le projet</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-content">
+          <h3>BTC CLICKER</h3>
+          <p>BTC CLICKER est une sorte de tycoon un peu à la cookie clicker mais au bitcoin.<br><br>Développé par Focus, BTC clicker est plutôt addictif et super fun.</p>
+          <div class="project-tags">
+            <span>Tycoon</span>
+            <span>Jeu</span>
+            <span>Fun</span>
+          </div>
+          <a href="https://focus-001.github.io/BTC-CLICKER/" class="project-link" target="_blank">Voir le projet</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Nexus. Dev par "Focus903" et "leo78454657" sur Discord.</p>
+  </footer>
+  <script src="js/script.js" type="module"></script>
+</body>
 </html>
