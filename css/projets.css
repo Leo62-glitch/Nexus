@@ -1,0 +1,321 @@
+/* Styles spécifiques à la page projets */
+.projects-hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: #111;
+  border-bottom: 1px solid #00ff00;
+}
+
+.projects-hero h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #00ff00;
+}
+
+.projects-hero p {
+  font-size: 1.2em;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background: #111;
+  border: 1px solid #00ff00;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+}
+
+.project-content {
+  padding: 20px;
+}
+
+.project-content h3 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: #00ff00;
+}
+
+.project-content p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.project-tags span {
+  background: rgba(0, 255, 0, 0.1);
+  color: #00ff00;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.9em;
+  border: 1px solid #00ff00;
+}
+
+.project-link {
+  display: inline-block;
+  padding: 8px 20px;
+  background: transparent;
+  border: 1px solid #00ff00;
+  color: #00ff00;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.project-link:hover {
+  background: #00ff00;
+  color: #000;
+}
+
+/* Ajustements pour les différents thèmes */
+body.theme-pink .projects-hero {
+  border-color: #fff;
+}
+
+body.theme-pink .project-card {
+  border-color: #fff;
+}
+
+body.theme-pink .project-tags span {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
+  color: #fff;
+}
+
+body.theme-pink .project-link {
+  border-color: #fff;
+  color: #fff;
+}
+
+body.theme-pink .project-link:hover {
+  background: #fff;
+  color: #ff69b4;
+}
+
+/* Thème Bleu-Rouge */
+body.theme-bluered .project-card {
+  border-color: #ff3366;
+}
+
+body.theme-bluered .project-tags span {
+  background: rgba(255, 51, 102, 0.1);
+  border-color: #ff3366;
+  color: #ff3366;
+}
+
+body.theme-bluered .project-link {
+  border-color: #ff3366;
+  color: #ff3366;
+}
+
+/* Thème Néon */
+body.theme-neon .project-card {
+  border-color: #ff00ff;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.3);
+}
+
+body.theme-neon .project-tags span {
+  background: rgba(255, 0, 255, 0.1);
+  border-color: #ff00ff;
+  color: #ff00ff;
+}
+
+body.theme-neon .project-link {
+  border-color: #ff00ff;
+  color: #ff00ff;
+  text-shadow: 0 0 5px #ff00ff;
+}
+
+/* Thème Spatial */
+body.theme-space .project-card {
+  border-color: #4a90e2;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+body.theme-space .project-tags span {
+  background: rgba(74, 144, 226, 0.1);
+  border-color: #4a90e2;
+  color: #4a90e2;
+}
+
+body.theme-space .project-link {
+  border-color: #4a90e2;
+  color: #4a90e2;
+}
+
+/* Thème Sakura */
+body.theme-sakura .project-card {
+  border-color: #d500f9;
+  background: #fff0f3;
+}
+
+body.theme-sakura .project-content h3 {
+  color: #d500f9;
+}
+
+body.theme-sakura .project-tags span {
+  background: rgba(213, 0, 249, 0.1);
+  border-color: #d500f9;
+  color: #d500f9;
+}
+
+body.theme-sakura .project-link {
+  border-color: #d500f9;
+  color: #d500f9;
+}
+
+body.theme-sakura .project-link:hover {
+  background: #d500f9;
+  color: #ffd1dc;
+}
+
+/* Ajout des nouveaux thèmes */
+
+/* Thème Coucher de Soleil */
+body.theme-sunset .project-card {
+  border-color: #f9d423;
+  background: rgba(255, 78, 80, 0.8);
+}
+
+body.theme-sunset .project-content h3 {
+  color: #f9d423;
+}
+
+body.theme-sunset .project-tags span {
+  background: rgba(249, 212, 35, 0.1);
+  border-color: #f9d423;
+  color: #f9d423;
+}
+
+body.theme-sunset .project-link {
+  border-color: #f9d423;
+  color: #f9d423;
+}
+
+body.theme-sunset .project-link:hover {
+  background: #f9d423;
+  color: #ff4e50;
+}
+
+/* Thème Cyberpunk */
+body.theme-cyberpunk .project-card {
+  border-color: #ff00ff;
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 20px rgba(0, 255, 249, 0.2);
+}
+
+body.theme-cyberpunk .project-content h3 {
+  color: #00fff9;
+  text-shadow: 0 0 8px #00fff9;
+}
+
+body.theme-cyberpunk .project-tags span {
+  background: rgba(255, 0, 255, 0.1);
+  border-color: #ff00ff;
+  color: #00fff9;
+}
+
+body.theme-cyberpunk .project-link {
+  border-color: #ff00ff;
+  color: #00fff9;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.3);
+}
+
+body.theme-cyberpunk .project-link:hover {
+  background: #ff00ff;
+  color: #000;
+}
+
+/* Thème Forêt */
+body.theme-forest .project-card {
+  border-color: #7fff00;
+  background: rgba(20, 55, 40, 0.9);
+}
+
+body.theme-forest .project-content h3 {
+  color: #7fff00;
+}
+
+body.theme-forest .project-tags span {
+  background: rgba(127, 255, 0, 0.1);
+  border-color: #7fff00;
+  color: #7fff00;
+}
+
+body.theme-forest .project-link {
+  border-color: #7fff00;
+  color: #7fff00;
+}
+
+body.theme-forest .project-link:hover {
+  background: #7fff00;
+  color: #1b4b36;
+}
+
+/* Suppression du style du thème Matrix et ajout du style pour le thème Synthwave */
+body.theme-synthwave .project-card {
+  border-color: #fe53bb;
+  background: rgba(21, 0, 34, 0.9);
+  box-shadow: 0 0 20px rgba(254, 83, 187, 0.3);
+}
+
+body.theme-synthwave .project-content h3 {
+  color: #0ff;
+  text-shadow: 0 0 8px #0ff;
+}
+
+body.theme-synthwave .project-tags span {
+  background: rgba(254, 83, 187, 0.1);
+  border-color: #fe53bb;
+  color: #0ff;
+  box-shadow: 0 0 10px rgba(254, 83, 187, 0.2);
+}
+
+body.theme-synthwave .project-link {
+  border-color: #fe53bb;
+  color: #0ff;
+  text-shadow: 0 0 8px #0ff;
+}
+
+body.theme-synthwave .project-link:hover {
+  background: #fe53bb;
+  color: #150022;
+  text-shadow: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .projects-hero {
+    padding: 40px 20px;
+  }
+
+  .projects-hero h2 {
+    font-size: 2em;
+  }
+}

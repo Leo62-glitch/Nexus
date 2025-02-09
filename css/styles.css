@@ -1,0 +1,836 @@
+/* Reset et styles de base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background: #000;
+  color: #00ff00;
+  line-height: 1.6;
+}
+
+/* En-tête */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #111;
+  border-bottom: 1px solid #00ff00;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+header .logo h1 {
+  margin-left: 10px;
+  font-size: 1.8em;
+  text-shadow: 0 0 5px #00ff00;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #00ff00;
+  transition: color 0.3s ease;
+  text-shadow: 0 0 5px #00ff00;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #b0ff00;
+}
+
+/* Bouton de thème */
+#theme-toggle-btn {
+  padding: 12px 20px;
+  background: transparent;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+#theme-toggle-btn:hover {
+  background: #00ff00;
+  color: #000;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+}
+
+.hero-content h2 {
+  font-size: 2.8em;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #00ff00;
+}
+
+.hero-content p {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.hero-content .btn {
+  margin-top: 20px;
+}
+
+/* Hero SVG Background */
+.hero-svg {
+  display: none;
+}
+
+/* Keyframe Animations */
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes circle-move {
+  0% {
+    r: 80;
+    opacity: 0.8;
+  }
+  50% {
+    r: 120;
+    opacity: 0.4;
+  }
+  100% {
+    r: 80;
+    opacity: 0.8;
+  }
+}
+
+/* About Section */
+.about {
+  padding: 40px 20px;
+  background: #111;
+  text-align: center;
+}
+
+.about .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about h3 {
+  margin-bottom: 20px;
+  font-size: 2em;
+  text-shadow: 0 0 5px #00ff00;
+}
+
+.about p {
+  font-size: 1.1em;
+}
+
+/* Pied de page */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  border-top: 1px solid #00ff00;
+}
+
+/* Thèmes */
+/* Thème Hacking (default) reste le même */
+
+/* Thème Rose */
+body.theme-pink {
+  background: #ff69b4;
+  color: #fff;
+}
+
+body.theme-pink header,
+body.theme-pink footer,
+body.theme-pink .about {
+  background: #ff1493;
+  border-color: #fff;
+}
+
+body.theme-pink .hero {
+  background: #ff69b4;
+}
+
+body.theme-pink .btn,
+body.theme-pink #theme-toggle-btn {
+  color: #fff;
+  border-color: #fff;
+}
+
+body.theme-pink .btn:hover,
+body.theme-pink #theme-toggle-btn:hover {
+  background: #fff;
+  color: #ff69b4;
+}
+
+/* Thème Bleu-Rouge */
+body.theme-bluered {
+  background: linear-gradient(45deg, #000428, #004e92);
+  color: #ff3366;
+}
+
+body.theme-bluered header,
+body.theme-bluered footer,
+body.theme-bluered .about {
+  background: rgba(0, 0, 0, 0.5);
+  border-color: #ff3366;
+}
+
+body.theme-bluered .hero {
+  background: transparent;
+}
+
+body.theme-bluered .btn,
+body.theme-bluered #theme-toggle-btn {
+  color: #ff3366;
+  border-color: #ff3366;
+}
+
+body.theme-bluered .btn:hover,
+body.theme-bluered #theme-toggle-btn:hover {
+  background: #ff3366;
+  color: #000428;
+}
+
+/* Thème Néon */
+body.theme-neon {
+  background: #000;
+  color: #fff;
+}
+
+body.theme-neon header,
+body.theme-neon footer,
+body.theme-neon .about {
+  background: #0f0f0f;
+  border-color: #ff00ff;
+}
+
+body.theme-neon h1,
+body.theme-neon h2,
+body.theme-neon h3 {
+  color: #0ff;
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
+}
+
+body.theme-neon .btn,
+body.theme-neon #theme-toggle-btn {
+  color: #ff00ff;
+  border-color: #ff00ff;
+  text-shadow: 0 0 5px #ff00ff;
+  box-shadow: 0 0 10px #ff00ff;
+}
+
+body.theme-neon .btn:hover,
+body.theme-neon #theme-toggle-btn:hover {
+  background: #ff00ff;
+  color: #000;
+}
+
+/* Thème Spatial */
+body.theme-space {
+  background: #000 url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle cx="100" cy="100" r="1" fill="%23fff"/></svg>') repeat;
+  color: #fff;
+}
+
+body.theme-space header,
+body.theme-space footer,
+body.theme-space .about {
+  background: rgba(0, 0, 0, 0.8);
+  border-color: #4a90e2;
+}
+
+body.theme-space h1,
+body.theme-space h2,
+body.theme-space h3 {
+  color: #4a90e2;
+  text-shadow: 0 0 10px #4a90e2;
+}
+
+body.theme-space .btn,
+body.theme-space #theme-toggle-btn {
+  color: #4a90e2;
+  border-color: #4a90e2;
+}
+
+body.theme-space .btn:hover,
+body.theme-space #theme-toggle-btn:hover {
+  background: #4a90e2;
+  color: #000;
+}
+
+/* Thème Sakura */
+body.theme-sakura {
+  background: #ffd1dc;
+  color: #d500f9;
+}
+
+body.theme-sakura header,
+body.theme-sakura footer,
+body.theme-sakura .about {
+  background: #fff0f3;
+  border-color: #d500f9;
+}
+
+body.theme-sakura h1,
+body.theme-sakura h2,
+body.theme-sakura h3 {
+  color: #d500f9;
+}
+
+body.theme-sakura .btn,
+body.theme-sakura #theme-toggle-btn {
+  color: #d500f9;
+  border-color: #d500f9;
+}
+
+body.theme-sakura .btn:hover,
+body.theme-sakura #theme-toggle-btn:hover {
+  background: #d500f9;
+  color: #ffd1dc;
+}
+
+/* Thème Coucher de Soleil */
+body.theme-sunset {
+  background: linear-gradient(45deg, #ff4e50, #f9d423);
+  color: #fff;
+}
+
+body.theme-sunset header,
+body.theme-sunset footer,
+body.theme-sunset .about {
+  background: rgba(255, 78, 80, 0.8);
+  border-color: #f9d423;
+}
+
+body.theme-sunset .btn,
+body.theme-sunset #theme-toggle-btn,
+body.theme-sunset .settings-btn {
+  color: #f9d423;
+  border-color: #f9d423;
+}
+
+body.theme-sunset .btn:hover,
+body.theme-sunset #theme-toggle-btn:hover,
+body.theme-sunset .settings-btn:hover {
+  background: #f9d423;
+  color: #ff4e50;
+}
+
+body.theme-sunset .settings-dropdown {
+  background: rgba(255, 78, 80, 0.9);
+  border-color: #f9d423;
+}
+
+/* Thème Synthwave */
+body.theme-synthwave {
+  background: linear-gradient(45deg, #150022, #2d0a3e);
+  color: #0ff;
+  position: relative;
+}
+
+body.theme-synthwave::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent 0,
+    rgba(0, 255, 255, 0.1) 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+  z-index: -1;
+  animation: scanline 8s linear infinite;
+}
+
+body.theme-synthwave header,
+body.theme-synthwave footer,
+body.theme-synthwave .about {
+  background: rgba(21, 0, 34, 0.9);
+  border-color: #fe53bb;
+  box-shadow: 0 0 15px rgba(254, 83, 187, 0.4);
+}
+
+body.theme-synthwave .btn,
+body.theme-synthwave #theme-toggle-btn,
+body.theme-synthwave .settings-btn {
+  color: #0ff;
+  border-color: #fe53bb;
+  text-shadow: 0 0 8px #0ff;
+  box-shadow: 0 0 10px rgba(254, 83, 187, 0.4);
+}
+
+body.theme-synthwave .btn:hover,
+body.theme-synthwave #theme-toggle-btn:hover,
+body.theme-synthwave .settings-btn:hover {
+  background: #fe53bb;
+  color: #150022;
+  text-shadow: none;
+}
+
+body.theme-synthwave .settings-dropdown {
+  background: rgba(21, 0, 34, 0.95);
+  border-color: #fe53bb;
+  box-shadow: 0 0 15px rgba(254, 83, 187, 0.4);
+}
+
+body.theme-synthwave h1,
+body.theme-synthwave h2,
+body.theme-synthwave h3 {
+  color: #fe53bb;
+  text-shadow: 0 0 10px #fe53bb, 0 0 20px #fe53bb;
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+/* Thème Cyberpunk */
+body.theme-cyberpunk {
+  background: linear-gradient(45deg, #000, #1a0033);
+  color: #00fff9;
+}
+
+body.theme-cyberpunk header,
+body.theme-cyberpunk footer,
+body.theme-cyberpunk .about {
+  background: rgba(0, 0, 0, 0.8);
+  border-color: #ff00ff;
+  box-shadow: 0 0 15px rgba(0, 255, 249, 0.3);
+}
+
+body.theme-cyberpunk .btn,
+body.theme-cyberpunk #theme-toggle-btn,
+body.theme-cyberpunk .settings-btn {
+  color: #00fff9;
+  border-color: #ff00ff;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.3);
+}
+
+body.theme-cyberpunk .btn:hover,
+body.theme-cyberpunk #theme-toggle-btn:hover,
+body.theme-cyberpunk .settings-btn:hover {
+  background: #ff00ff;
+  color: #000;
+}
+
+body.theme-cyberpunk .settings-dropdown {
+  background: rgba(0, 0, 0, 0.9);
+  border-color: #ff00ff;
+}
+
+/* Thème Forêt */
+body.theme-forest {
+  background: #1b4b36;
+  color: #7fff00;
+}
+
+body.theme-forest header,
+body.theme-forest footer,
+body.theme-forest .about {
+  background: rgba(20, 55, 40, 0.9);
+  border-color: #7fff00;
+}
+
+body.theme-forest .btn,
+body.theme-forest #theme-toggle-btn,
+body.theme-forest .settings-btn {
+  color: #7fff00;
+  border-color: #7fff00;
+}
+
+body.theme-forest .btn:hover,
+body.theme-forest #theme-toggle-btn:hover,
+body.theme-forest .settings-btn:hover {
+  background: #7fff00;
+  color: #1b4b36;
+}
+
+body.theme-forest .settings-dropdown {
+  background: rgba(20, 55, 40, 0.95);
+  border-color: #7fff00;
+}
+
+/* Settings Button */
+.settings-btn {
+  background: transparent;
+  border: 1px solid #00ff00;
+  color: #00ff00;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.3s ease;
+}
+
+.settings-btn:hover {
+  background: #00ff00;
+  color: #000;
+}
+
+.settings-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: #111;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #00ff00;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+}
+
+.modal h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #00ff00;
+}
+
+.theme-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.theme-btn {
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  transition: transform 0.2s;
+}
+
+.theme-btn:hover {
+  transform: scale(1.05);
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  color: #00ff00;
+  font-size: 1.5em;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.close-modal:hover {
+  color: #fff;
+}
+
+/* Remove the fixed theme selector since we're using modal now */
+.theme-selector {
+  display: none;
+}
+
+/* Settings Button and Dropdown */
+.settings-container {
+  position: relative;
+}
+
+.settings-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #111;
+  border: 1px solid #00ff00;
+  border-radius: 4px;
+  margin-top: 5px;
+  z-index: 100;
+}
+
+.settings-dropdown.show {
+  display: block;
+}
+
+.settings-dropdown button {
+  width: 100%;
+  padding: 8px 15px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.settings-dropdown button:hover {
+  background: #00ff00;
+  color: #000;
+}
+
+/* Theme adjustments for dropdowns in different themes */
+body.theme-pink .settings-dropdown {
+  background: #ff1493;
+  border-color: #fff;
+}
+
+body.theme-pink .settings-dropdown button {
+  color: #fff;
+}
+
+body.theme-pink .settings-dropdown button:hover {
+  background: #fff;
+  color: #ff69b4;
+}
+
+body.theme-bluered .settings-dropdown {
+  background: rgba(0, 0, 0, 0.5);
+  border-color: #ff3366;
+}
+
+body.theme-bluered .settings-dropdown button {
+  color: #ff3366;
+}
+
+body.theme-bluered .settings-dropdown button:hover {
+  background: #ff3366;
+  color: #000428;
+}
+
+body.theme-neon .settings-dropdown {
+  background: #0f0f0f;
+  border-color: #ff00ff;
+}
+
+body.theme-neon .settings-dropdown button {
+  color: #ff00ff;
+}
+
+body.theme-neon .settings-dropdown button:hover {
+  background: #ff00ff;
+  color: #000;
+}
+
+body.theme-space .settings-dropdown {
+  background: rgba(0, 0, 0, 0.8);
+  border-color: #4a90e2;
+}
+
+body.theme-space .settings-dropdown button {
+  color: #4a90e2;
+}
+
+body.theme-space .settings-dropdown button:hover {
+  background: #4a90e2;
+  color: #000;
+}
+
+body.theme-sakura .settings-dropdown {
+  background: #fff0f3;
+  border-color: #ff8ba7;
+}
+
+body.theme-sakura .settings-dropdown button {
+  color: #ff8ba7;
+}
+
+body.theme-sakura .settings-dropdown button:hover {
+  background: #ff8ba7;
+  color: #fff;
+}
+
+body.theme-sunset .settings-dropdown {
+  background: rgba(255, 78, 80, 0.9);
+  border-color: #f9d423;
+}
+
+body.theme-sunset .settings-dropdown button {
+  color: #f9d423;
+}
+
+body.theme-sunset .settings-dropdown button:hover {
+  background: #f9d423;
+  color: #ff4e50;
+}
+
+body.theme-synthwave .settings-dropdown {
+  background: rgba(21, 0, 34, 0.95);
+  border-color: #fe53bb;
+  box-shadow: 0 0 15px rgba(254, 83, 187, 0.4);
+}
+
+body.theme-synthwave .settings-dropdown button {
+  color: #fe53bb;
+}
+
+body.theme-synthwave .settings-dropdown button:hover {
+  background: #fe53bb;
+  color: #150022;
+}
+
+body.theme-cyberpunk .settings-dropdown {
+  background: rgba(0, 0, 0, 0.9);
+  border-color: #ff00ff;
+}
+
+body.theme-cyberpunk .settings-dropdown button {
+  color: #ff00ff;
+}
+
+body.theme-cyberpunk .settings-dropdown button:hover {
+  background: #ff00ff;
+  color: #000;
+}
+
+body.theme-forest .settings-dropdown {
+  background: rgba(20, 55, 40, 0.95);
+  border-color: #7fff00;
+}
+
+body.theme-forest .settings-dropdown button {
+  color: #7fff00;
+}
+
+body.theme-forest .settings-dropdown button:hover {
+  background: #7fff00;
+  color: #1b4b36;
+}
+
+/* Background Modal Styles */
+.background-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.background-option {
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  overflow: hidden;
+}
+
+.background-option:hover {
+  transform: scale(1.05);
+}
+
+.background-option.selected {
+  border-color: #00ff00;
+}
+
+.background-option img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.default-bg-preview {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, #000428, #004e92);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 6px;
+  font-size: 1.1em;
+}
+
+.background-option[data-bg="default"] {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.background-option[data-bg="default"]:hover {
+  transform: scale(1.05);
+}
+
+/* Adjust dropdown to include new button */
+.settings-dropdown button {
+  width: 100%;
+  padding: 8px 15px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  text-align: left;
+  transition: all 0.3s ease;
+}
